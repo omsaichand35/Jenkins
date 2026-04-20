@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-@app.rout('/')
+@app.route('/')
 def hello():
     build_id = os.getenv('BUILD_ID', 'Local')
     return f"<h1>Hello, world from flask!</h1><p>Deploy via jenkins webhook. Build  ID: {build_id}</p><p>checking the workflow</p>"
